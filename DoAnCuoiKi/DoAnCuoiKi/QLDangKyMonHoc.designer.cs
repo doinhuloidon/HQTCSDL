@@ -263,6 +263,20 @@ namespace DoAnCuoiKi
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), masv, ghichu);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.editlhp")]
+		public int editlhp1([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maLop, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(10)")] string phongHoc, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Thu", DbType="NChar(15)")] string thu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TuTiet", DbType="Int")] System.Nullable<int> tuTiet, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DenTiet", DbType="Int")] System.Nullable<int> denTiet, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> soLuong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> tgBatDau, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> tgKetThuc)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maLop, phongHoc, thu, tuTiet, denTiet, soLuong, tgBatDau, tgKetThuc);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.deletelhp")]
+		public int deletelhp([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maLop)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maLop);
+			return ((int)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ChuongTrinhDaoTao")]
