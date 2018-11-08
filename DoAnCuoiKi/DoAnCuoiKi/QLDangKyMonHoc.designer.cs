@@ -192,37 +192,6 @@ namespace DoAnCuoiKi
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Them_lop_hoc_phan")]
-		public int Them_lop_hoc_phan([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maMon, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(10)")] string phongHoc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(15)")] string thu, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tuTiet, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> denTiet, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maGV, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> soLuong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> tgBatDau)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maMon, phongHoc, thu, tuTiet, denTiet, maGV, soLuong, tgBatDau);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Chuong_trinh_ngoai_ke_hoach", IsComposable=true)]
-		public IQueryable<Chuong_trinh_ngoai_ke_hoachResult> Chuong_trinh_ngoai_ke_hoach([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(10)")] string sv)
-		{
-			return this.CreateMethodCallQuery<Chuong_trinh_ngoai_ke_hoachResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sv);
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Chuong_trinh_dao_tao", IsComposable=true)]
-		public IQueryable<Chuong_trinh_dao_taoResult> Chuong_trinh_dao_tao([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(10)")] string sv)
-		{
-			return this.CreateMethodCallQuery<Chuong_trinh_dao_taoResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sv);
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Chuong_trinh_theo_ke_hoach", IsComposable=true)]
-		public IQueryable<Chuong_trinh_theo_ke_hoachResult> Chuong_trinh_theo_ke_hoach([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(10)")] string sv)
-		{
-			return this.CreateMethodCallQuery<Chuong_trinh_theo_ke_hoachResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sv);
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Mon_dang_ky", IsComposable=true)]
-		public IQueryable<Mon_dang_kyResult> Mon_dang_ky([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maSV)
-		{
-			return this.CreateMethodCallQuery<Mon_dang_kyResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSV);
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.themlophp")]
 		public int themlophp([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maLop, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maMon, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(10)")] string phongHoc, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Thu", DbType="NChar(15)")] string thu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TuTiet", DbType="Int")] System.Nullable<int> tuTiet, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DenTiet", DbType="Int")] System.Nullable<int> denTiet, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maGV, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> soLuong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> daDK, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> tgBatDau, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> tgKetThuc)
 		{
@@ -276,6 +245,51 @@ namespace DoAnCuoiKi
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maLop);
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Xoa_lop_hoc_phan")]
+		public int Xoa_lop_hoc_phan([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maLop)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maLop);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Them_lop_hoc_phan")]
+		public int Them_lop_hoc_phan([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maMon, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(10)")] string phongHoc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(15)")] string thu, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> tuTiet, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> denTiet, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maGV, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> soLuong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> tgBatDau)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maMon, phongHoc, thu, tuTiet, denTiet, maGV, soLuong, tgBatDau);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Xoa_mon_dang_ky")]
+		public int Xoa_mon_dang_ky([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maSV, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maLop)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSV, maLop);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Chuong_trinh_dao_tao", IsComposable=true)]
+		public IQueryable<Chuong_trinh_dao_taoResult> Chuong_trinh_dao_tao([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(10)")] string sv)
+		{
+			return this.CreateMethodCallQuery<Chuong_trinh_dao_taoResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sv);
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Chuong_trinh_ngoai_ke_hoach", IsComposable=true)]
+		public IQueryable<Chuong_trinh_ngoai_ke_hoachResult> Chuong_trinh_ngoai_ke_hoach([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(10)")] string sv)
+		{
+			return this.CreateMethodCallQuery<Chuong_trinh_ngoai_ke_hoachResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sv);
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Chuong_trinh_theo_ke_hoach", IsComposable=true)]
+		public IQueryable<Chuong_trinh_theo_ke_hoachResult> Chuong_trinh_theo_ke_hoach([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(10)")] string sv)
+		{
+			return this.CreateMethodCallQuery<Chuong_trinh_theo_ke_hoachResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), sv);
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Mon_dang_ky", IsComposable=true)]
+		public IQueryable<Mon_dang_kyResult> Mon_dang_ky([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maSV)
+		{
+			return this.CreateMethodCallQuery<Mon_dang_kyResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSV);
 		}
 	}
 	
@@ -3055,6 +3069,202 @@ namespace DoAnCuoiKi
 		}
 	}
 	
+	public partial class dskhongdkResult
+	{
+		
+		private string _maSV;
+		
+		private string _tenSV;
+		
+		private string _tenKhoa;
+		
+		private string _lop;
+		
+		private string _nienKhoa;
+		
+		private string _ghiChu;
+		
+		public dskhongdkResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maSV", DbType="NChar(20) NOT NULL", CanBeNull=false)]
+		public string maSV
+		{
+			get
+			{
+				return this._maSV;
+			}
+			set
+			{
+				if ((this._maSV != value))
+				{
+					this._maSV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenSV", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string tenSV
+		{
+			get
+			{
+				return this._tenSV;
+			}
+			set
+			{
+				if ((this._tenSV != value))
+				{
+					this._tenSV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenKhoa", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string tenKhoa
+		{
+			get
+			{
+				return this._tenKhoa;
+			}
+			set
+			{
+				if ((this._tenKhoa != value))
+				{
+					this._tenKhoa = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lop", DbType="NChar(20) NOT NULL", CanBeNull=false)]
+		public string lop
+		{
+			get
+			{
+				return this._lop;
+			}
+			set
+			{
+				if ((this._lop != value))
+				{
+					this._lop = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nienKhoa", DbType="NChar(20) NOT NULL", CanBeNull=false)]
+		public string nienKhoa
+		{
+			get
+			{
+				return this._nienKhoa;
+			}
+			set
+			{
+				if ((this._nienKhoa != value))
+				{
+					this._nienKhoa = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ghiChu", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		public string ghiChu
+		{
+			get
+			{
+				return this._ghiChu;
+			}
+			set
+			{
+				if ((this._ghiChu != value))
+				{
+					this._ghiChu = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Chuong_trinh_dao_taoResult
+	{
+		
+		private string _maMon;
+		
+		private string _tenMon;
+		
+		private string _loaiMon;
+		
+		private int _soTC;
+		
+		public Chuong_trinh_dao_taoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maMon", DbType="NChar(20) NOT NULL", CanBeNull=false)]
+		public string maMon
+		{
+			get
+			{
+				return this._maMon;
+			}
+			set
+			{
+				if ((this._maMon != value))
+				{
+					this._maMon = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenMon", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string tenMon
+		{
+			get
+			{
+				return this._tenMon;
+			}
+			set
+			{
+				if ((this._tenMon != value))
+				{
+					this._tenMon = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_loaiMon", DbType="NChar(20) NOT NULL", CanBeNull=false)]
+		public string loaiMon
+		{
+			get
+			{
+				return this._loaiMon;
+			}
+			set
+			{
+				if ((this._loaiMon != value))
+				{
+					this._loaiMon = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soTC", DbType="Int NOT NULL")]
+		public int soTC
+		{
+			get
+			{
+				return this._soTC;
+			}
+			set
+			{
+				if ((this._soTC != value))
+				{
+					this._soTC = value;
+				}
+			}
+		}
+	}
+	
 	public partial class Chuong_trinh_ngoai_ke_hoachResult
 	{
 		
@@ -3220,86 +3430,6 @@ namespace DoAnCuoiKi
 				if ((this._lichHoc != value))
 				{
 					this._lichHoc = value;
-				}
-			}
-		}
-	}
-	
-	public partial class Chuong_trinh_dao_taoResult
-	{
-		
-		private string _maMon;
-		
-		private string _tenMon;
-		
-		private string _loaiMon;
-		
-		private int _soTC;
-		
-		public Chuong_trinh_dao_taoResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maMon", DbType="NChar(20) NOT NULL", CanBeNull=false)]
-		public string maMon
-		{
-			get
-			{
-				return this._maMon;
-			}
-			set
-			{
-				if ((this._maMon != value))
-				{
-					this._maMon = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenMon", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string tenMon
-		{
-			get
-			{
-				return this._tenMon;
-			}
-			set
-			{
-				if ((this._tenMon != value))
-				{
-					this._tenMon = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_loaiMon", DbType="NChar(20) NOT NULL", CanBeNull=false)]
-		public string loaiMon
-		{
-			get
-			{
-				return this._loaiMon;
-			}
-			set
-			{
-				if ((this._loaiMon != value))
-				{
-					this._loaiMon = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soTC", DbType="Int NOT NULL")]
-		public int soTC
-		{
-			get
-			{
-				return this._soTC;
-			}
-			set
-			{
-				if ((this._soTC != value))
-				{
-					this._soTC = value;
 				}
 			}
 		}
@@ -3586,122 +3716,6 @@ namespace DoAnCuoiKi
 				if ((this._tgKetThuc != value))
 				{
 					this._tgKetThuc = value;
-				}
-			}
-		}
-	}
-	
-	public partial class dskhongdkResult
-	{
-		
-		private string _maSV;
-		
-		private string _tenSV;
-		
-		private string _tenKhoa;
-		
-		private string _lop;
-		
-		private string _nienKhoa;
-		
-		private string _ghiChu;
-		
-		public dskhongdkResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maSV", DbType="NChar(20) NOT NULL", CanBeNull=false)]
-		public string maSV
-		{
-			get
-			{
-				return this._maSV;
-			}
-			set
-			{
-				if ((this._maSV != value))
-				{
-					this._maSV = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenSV", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string tenSV
-		{
-			get
-			{
-				return this._tenSV;
-			}
-			set
-			{
-				if ((this._tenSV != value))
-				{
-					this._tenSV = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenKhoa", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string tenKhoa
-		{
-			get
-			{
-				return this._tenKhoa;
-			}
-			set
-			{
-				if ((this._tenKhoa != value))
-				{
-					this._tenKhoa = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lop", DbType="NChar(20) NOT NULL", CanBeNull=false)]
-		public string lop
-		{
-			get
-			{
-				return this._lop;
-			}
-			set
-			{
-				if ((this._lop != value))
-				{
-					this._lop = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nienKhoa", DbType="NChar(20) NOT NULL", CanBeNull=false)]
-		public string nienKhoa
-		{
-			get
-			{
-				return this._nienKhoa;
-			}
-			set
-			{
-				if ((this._nienKhoa != value))
-				{
-					this._nienKhoa = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ghiChu", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
-		public string ghiChu
-		{
-			get
-			{
-				return this._ghiChu;
-			}
-			set
-			{
-				if ((this._ghiChu != value))
-				{
-					this._ghiChu = value;
 				}
 			}
 		}

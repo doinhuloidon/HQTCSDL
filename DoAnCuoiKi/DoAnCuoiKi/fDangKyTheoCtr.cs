@@ -18,13 +18,13 @@ namespace DoAnCuoiKi
             InitializeComponent();
             LoadData();
         }
-        BLQuanLyMonHoc blQLMH = new BLQuanLyMonHoc();
+        QLDangKyMonHocDataContext qlMH = new QLDangKyMonHocDataContext();
         private void LoadData()
         {
             try
             {
-                dgrDanhSach.DataSource = blQLMH.LayMonHocTrongChuongTrinh(PropertiesCls.tenDangNhap);
-                dgrTinChi.DataSource = blQLMH.DanhSachDangKy(PropertiesCls.tenDangNhap);
+                dgrDanhSach.DataSource = qlMH.Chuong_trinh_theo_ke_hoach(PropertiesCls.tenDangNhap);
+                dgrTinChi.DataSource = qlMH.Mon_dang_ky(PropertiesCls.tenDangNhap);
             }
             catch
             {
@@ -34,7 +34,6 @@ namespace DoAnCuoiKi
         }
         private void dgrDanhSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            QLDangKyMonHocDataContext qlMH = new QLDangKyMonHocDataContext();
             if (dgrDanhSach.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
@@ -45,13 +44,13 @@ namespace DoAnCuoiKi
         }
         private void dgrTinChi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            var senderGrid = (DataGridView)sender;
-
-            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
-                e.RowIndex >= 0)
+            if (dgrTinChi.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+               e.RowIndex >= 0)
             {
-                MessageBox.Show("Hello!");
+                int r = dgrTinChi.CurrentCell.RowIndex;
+                qlMH.Xoa_mon_dang_ky(PropertiesCls.tenDangNhap, dgrTinChi.Rows[r].Cells[2].Value.ToString().Trim());
             }
+            LoadData();
         }
         private void dgrDanhSach_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {

@@ -112,7 +112,7 @@
         <classShapeMoniker Id="a2804d40-cad7-42c7-b2f5-de9cd179751d" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 5.609375); (6.26041666666667 : 5.609375 : JumpStart); (6.42708333333333 : 5.609375 : JumpEnd); (8.3749975 : 5.609375); (8.3749975 : 4.27089680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(2.75 : 5.609375); (8.3749975 : 5.609375); (8.3749975 : 4.27089680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/QLDangKyMonHocDataContext/Khoa/Khoa_SinhVien" />
       <nodes>
         <classShapeMoniker Id="9e7f4ebb-16a2-4bd6-ab0c-32f26a21542d" />

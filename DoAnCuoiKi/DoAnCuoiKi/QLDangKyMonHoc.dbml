@@ -163,65 +163,6 @@
     <Parameter Name="maLop" Type="System.String" DbType="NChar(20)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.Them_lop_hoc_phan" Method="Them_lop_hoc_phan">
-    <Parameter Name="maMon" Type="System.String" DbType="NChar(20)" />
-    <Parameter Name="phongHoc" Type="System.String" DbType="NChar(10)" />
-    <Parameter Name="thu" Type="System.String" DbType="NChar(15)" />
-    <Parameter Name="tuTiet" Type="System.Int32" DbType="Int" />
-    <Parameter Name="denTiet" Type="System.Int32" DbType="Int" />
-    <Parameter Name="maGV" Type="System.String" DbType="NChar(20)" />
-    <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
-    <Parameter Name="tgBatDau" Type="System.DateTime" DbType="Date" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.Chuong_trinh_ngoai_ke_hoach" Method="Chuong_trinh_ngoai_ke_hoach" IsComposable="true">
-    <Parameter Name="sv" Type="System.String" DbType="NChar(10)" />
-    <ElementType Name="Chuong_trinh_ngoai_ke_hoachResult">
-      <Column Name="maLop" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
-      <Column Name="tenMon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="soTC" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="soTiet" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="loaiMon" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
-      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="daDK" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="tenGV" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="lichHoc" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.Chuong_trinh_dao_tao" Method="Chuong_trinh_dao_tao" IsComposable="true">
-    <Parameter Name="sv" Type="System.String" DbType="NChar(10)" />
-    <ElementType Name="Chuong_trinh_dao_taoResult">
-      <Column Name="maMon" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="tenMon" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="loaiMon" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="soTC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.Chuong_trinh_theo_ke_hoach" Method="Chuong_trinh_theo_ke_hoach" IsComposable="true">
-    <Parameter Name="sv" Type="System.String" DbType="NChar(10)" />
-    <ElementType Name="Chuong_trinh_theo_ke_hoachResult">
-      <Column Name="maLop" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="tenMon" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="soTC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="soTiet" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="loaiMon" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="soLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="daDK" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="TenGV" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="lichHoc" Type="System.String" DbType="NVarChar(52) NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.Mon_dang_ky" Method="Mon_dang_ky" IsComposable="true">
-    <Parameter Name="maSV" Type="System.String" DbType="NChar(20)" />
-    <ElementType Name="Mon_dang_kyResult">
-      <Column Name="maLop" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="tenMon" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="soTC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="tenGV" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="tgBatDau" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="tgKetThuc" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.themlophp" Method="themlophp">
     <Parameter Name="maLop" Type="System.String" DbType="NChar(20)" />
     <Parameter Name="maMon" Type="System.String" DbType="NChar(20)" />
@@ -287,5 +228,73 @@
   <Function Name="dbo.deletelhp" Method="deletelhp">
     <Parameter Name="maLop" Type="System.String" DbType="NChar(20)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Xoa_lop_hoc_phan" Method="Xoa_lop_hoc_phan">
+    <Parameter Name="maLop" Type="System.String" DbType="NChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Them_lop_hoc_phan" Method="Them_lop_hoc_phan">
+    <Parameter Name="maMon" Type="System.String" DbType="NChar(20)" />
+    <Parameter Name="phongHoc" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="thu" Type="System.String" DbType="NChar(15)" />
+    <Parameter Name="tuTiet" Type="System.Int32" DbType="Int" />
+    <Parameter Name="denTiet" Type="System.Int32" DbType="Int" />
+    <Parameter Name="maGV" Type="System.String" DbType="NChar(20)" />
+    <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tgBatDau" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Xoa_mon_dang_ky" Method="Xoa_mon_dang_ky">
+    <Parameter Name="maSV" Type="System.String" DbType="NChar(20)" />
+    <Parameter Name="maLop" Type="System.String" DbType="NChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Chuong_trinh_dao_tao" Method="Chuong_trinh_dao_tao" IsComposable="true">
+    <Parameter Name="sv" Type="System.String" DbType="NChar(10)" />
+    <ElementType Name="Chuong_trinh_dao_taoResult">
+      <Column Name="maMon" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="tenMon" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="loaiMon" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="soTC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Chuong_trinh_ngoai_ke_hoach" Method="Chuong_trinh_ngoai_ke_hoach" IsComposable="true">
+    <Parameter Name="sv" Type="System.String" DbType="NChar(10)" />
+    <ElementType Name="Chuong_trinh_ngoai_ke_hoachResult">
+      <Column Name="maLop" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="tenMon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="soTC" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="soTiet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="loaiMon" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="daDK" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tenGV" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="lichHoc" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Chuong_trinh_theo_ke_hoach" Method="Chuong_trinh_theo_ke_hoach" IsComposable="true">
+    <Parameter Name="sv" Type="System.String" DbType="NChar(10)" />
+    <ElementType Name="Chuong_trinh_theo_ke_hoachResult">
+      <Column Name="maLop" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="tenMon" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="soTC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="soTiet" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="loaiMon" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="daDK" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TenGV" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="lichHoc" Type="System.String" DbType="NVarChar(52) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Mon_dang_ky" Method="Mon_dang_ky" IsComposable="true">
+    <Parameter Name="maSV" Type="System.String" DbType="NChar(20)" />
+    <ElementType Name="Mon_dang_kyResult">
+      <Column Name="maLop" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="tenMon" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="soTC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tenGV" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="tgBatDau" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="tgKetThuc" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+    </ElementType>
   </Function>
 </Database>

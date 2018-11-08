@@ -11,7 +11,6 @@ namespace DoAnCuoiKi.BS_layer
         QLDangKyMonHocDataContext ql = new QLDangKyMonHocDataContext();
         public IEnumerable<dynamic> Laylhp()
         {
-
             var ab = ql.timkiem();
             return ab;
         }
@@ -34,7 +33,7 @@ namespace DoAnCuoiKi.BS_layer
         }
         public void sualophocphan(string maLop, string phongHoc, string Thu, int TuTiet, int DenTiet, int soLuong, string tgBatDau, string tgKetThuc)
         {
-            ql.editlhp(maLop, phongHoc, Thu, TuTiet, DenTiet, soLuong, DateTime.Parse(tgBatDau), DateTime.Parse(tgKetThuc));
+            //ql.editlhp(maLop, phongHoc, Thu, TuTiet, DenTiet, soLuong, DateTime.Parse(tgBatDau), DateTime.Parse(tgKetThuc));
         }
         public void xoalhp(string malop)
         {
