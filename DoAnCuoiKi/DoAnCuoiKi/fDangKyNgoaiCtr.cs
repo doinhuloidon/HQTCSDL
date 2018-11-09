@@ -19,7 +19,7 @@ namespace DoAnCuoiKi
             LoadData();
         }
         QLDangKyMonHocDataContext qlMH = new QLDangKyMonHocDataContext();
-        private void LoadData()
+        public void LoadData()
         {
             try
             {
@@ -58,7 +58,15 @@ namespace DoAnCuoiKi
                e.RowIndex >= 0)
             {
                 int r = dgrTinChi.CurrentCell.RowIndex;
-                qlMH.Xoa_mon_dang_ky(PropertiesCls.tenDangNhap, dgrTinChi.Rows[r].Cells[2].Value.ToString().Trim());
+                DialogResult traloi;
+                // Hiện hộp thoại hỏi đáp
+                traloi = MessageBox.Show("Bạn có muốn xóa không?", "Trả lời",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                // Kiểm tra có nhắp chọn nút Ok không?
+                if (traloi == DialogResult.OK)
+                {
+                    qlMH.Xoa_mon_dang_ky(PropertiesCls.tenDangNhap, dgrTinChi.Rows[r].Cells[2].Value.ToString().Trim());
+                }
             }
             LoadData();
         }

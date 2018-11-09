@@ -85,6 +85,12 @@
     <Compile Include="BS layer\BLTaiKhoan.cs" />
     <Compile Include="BS layer\BLTCLHocPhan.cs" />
     <Compile Include="DB layer\DBMain.cs" />
+    <Compile Include="fChuyenLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fChuyenLop.Designer.cs">
+      <DependentUpon>fChuyenLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="fDangKyNgoaiCtr.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     <Compile Include="TCLHocPhan.Designer.cs">
       <DependentUpon>TCLHocPhan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="fChuyenLop.resx">
+      <DependentUpon>fChuyenLop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fDangKyNgoaiCtr.resx">
       <DependentUpon>fDangKyNgoaiCtr.cs</DependentUpon>
     </EmbeddedResource>

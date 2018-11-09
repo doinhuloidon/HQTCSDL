@@ -40,7 +40,7 @@ namespace DoAnCuoiKi
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
             this.dgrMonHoc.Visible = true;
-
+            LoadData();           
         }
         private void btnDKTCT_Click(object sender, EventArgs e)
         {
@@ -58,6 +58,7 @@ namespace DoAnCuoiKi
             else
             {
                 ActiveChildForm("fDangKyTheoCtr");
+                ((fDangKyTheoCtr)this.ActiveMdiChild).LoadData();
             }
             this.dgrMonHoc.Visible = false;
         }
@@ -177,6 +178,7 @@ namespace DoAnCuoiKi
             else
             {
                 ActiveChildForm("fDangKyNgoaiCtr");
+                ((fDangKyNgoaiCtr)this.ActiveMdiChild).LoadData();
             }
             this.dgrMonHoc.Visible = false;
         }
