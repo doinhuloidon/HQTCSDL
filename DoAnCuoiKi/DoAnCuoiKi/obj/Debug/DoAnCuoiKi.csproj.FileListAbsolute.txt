@@ -838,6 +838,7 @@ E:\Năm 3\DBMS\HQTCSDLa\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.fkhongdcdk.re
 >>>>>>> 7cc5d5aa6fdd4063d6e39eca0f2f7adbaa1c0f40
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.fkhongdcdk.resources
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.fChuyenLop.resources
+=======
 E:\Năm 3\DBMS\New folder\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\bin\Debug\DoAnCuoiKi.exe.config
 E:\Năm 3\DBMS\New folder\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\bin\Debug\DoAnCuoiKi.exe
 E:\Năm 3\DBMS\New folder\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\bin\Debug\DoAnCuoiKi.pdb
