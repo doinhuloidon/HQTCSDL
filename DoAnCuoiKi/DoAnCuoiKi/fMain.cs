@@ -98,7 +98,7 @@ namespace DoAnCuoiKi
         {
             if (!CheckExistForm("fQLSV"))
             {
-                fQLSV f = new fQLSV();
+                fkhongdcdk f = new fkhongdcdk();
                 f.MdiParent = this;
                 f.FormBorderStyle = FormBorderStyle.None;
                 f.Dock = DockStyle.Fill;

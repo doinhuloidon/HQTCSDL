@@ -109,12 +109,6 @@
     <Compile Include="fDangNhap.Designer.cs">
       <DependentUpon>fDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="fkhongdcdk.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fkhongdcdk.Designer.cs">
-      <DependentUpon>fkhongdcdk.cs</DependentUpon>
-    </Compile>
     <Compile Include="fLop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,9 +155,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fDangNhap.resx">
       <DependentUpon>fDangNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fkhongdcdk.resx">
-      <DependentUpon>fkhongdcdk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fLop.resx">
       <DependentUpon>fLop.cs</DependentUpon>

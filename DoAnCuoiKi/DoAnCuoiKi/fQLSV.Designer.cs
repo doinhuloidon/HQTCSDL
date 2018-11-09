@@ -1,6 +1,6 @@
 ﻿namespace DoAnCuoiKi
 {
-    partial class fQLSV
+    partial class fkhongdcdk
     {
         /// <summary>
         /// Required designer variable.
@@ -28,36 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fQLSV));
-            this.txtMaSV = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fkhongdcdk));
+            this.txtmasv = new System.Windows.Forms.TextBox();
             this.gbxChiTiet = new System.Windows.Forms.GroupBox();
-            this.txtGhiChu = new System.Windows.Forms.TextBox();
+            this.txtghi = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgrDSSV = new System.Windows.Forms.DataGridView();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnThemmoi = new System.Windows.Forms.Button();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            this.maSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nienKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ghiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnluu = new System.Windows.Forms.Button();
+            this.btndeletesv = new System.Windows.Forms.Button();
+            this.btneditsv = new System.Windows.Forms.Button();
+            this.btnaddsv = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.gbxChiTiet.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrDSSV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtMaSV
+            // txtmasv
             // 
-            this.txtMaSV.Location = new System.Drawing.Point(95, 26);
-            this.txtMaSV.Name = "txtMaSV";
-            this.txtMaSV.Size = new System.Drawing.Size(133, 23);
-            this.txtMaSV.TabIndex = 1;
+            this.txtmasv.Location = new System.Drawing.Point(95, 26);
+            this.txtmasv.Name = "txtmasv";
+            this.txtmasv.Size = new System.Drawing.Size(133, 23);
+            this.txtmasv.TabIndex = 1;
             // 
             // gbxChiTiet
             // 
-            this.gbxChiTiet.Controls.Add(this.txtGhiChu);
+            this.gbxChiTiet.Controls.Add(this.txtghi);
             this.gbxChiTiet.Controls.Add(this.label16);
-            this.gbxChiTiet.Controls.Add(this.txtMaSV);
+            this.gbxChiTiet.Controls.Add(this.txtmasv);
             this.gbxChiTiet.Controls.Add(this.label2);
             this.gbxChiTiet.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxChiTiet.Location = new System.Drawing.Point(2, 3);
@@ -67,13 +73,13 @@
             this.gbxChiTiet.TabStop = false;
             this.gbxChiTiet.Text = "Thông tin chi tiết";
             // 
-            // txtGhiChu
+            // txtghi
             // 
-            this.txtGhiChu.Location = new System.Drawing.Point(95, 52);
-            this.txtGhiChu.Multiline = true;
-            this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(133, 51);
-            this.txtGhiChu.TabIndex = 3;
+            this.txtghi.Location = new System.Drawing.Point(95, 52);
+            this.txtghi.Multiline = true;
+            this.txtghi.Name = "txtghi";
+            this.txtghi.Size = new System.Drawing.Size(133, 51);
+            this.txtghi.TabIndex = 3;
             // 
             // label16
             // 
@@ -97,7 +103,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dgrDSSV);
+            this.groupBox1.Controls.Add(this.dgv);
             this.groupBox1.Location = new System.Drawing.Point(255, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(774, 519);
@@ -105,74 +111,114 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách";
             // 
-            // dgrDSSV
+            // dgv
             // 
-            this.dgrDSSV.AllowUserToAddRows = false;
-            this.dgrDSSV.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dgrDSSV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrDSSV.Location = new System.Drawing.Point(6, 19);
-            this.dgrDSSV.Name = "dgrDSSV";
-            this.dgrDSSV.ReadOnly = true;
-            this.dgrDSSV.RowHeadersVisible = false;
-            this.dgrDSSV.Size = new System.Drawing.Size(762, 494);
-            this.dgrDSSV.TabIndex = 0;
-            this.dgrDSSV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrDSSV_CellClick);
+            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maSV,
+            this.tenSV,
+            this.tenKhoa,
+            this.lop,
+            this.nienKhoa,
+            this.ghiChu});
+            this.dgv.Location = new System.Drawing.Point(6, 19);
+            this.dgv.Name = "dgv";
+            this.dgv.Size = new System.Drawing.Size(768, 455);
+            this.dgv.TabIndex = 1;
+            this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             // 
-            // btnLuu
+            // maSV
             // 
-            this.btnLuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
-            this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(1035, 202);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(92, 39);
-            this.btnLuu.TabIndex = 38;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            this.maSV.DataPropertyName = "maSV";
+            this.maSV.HeaderText = "Mã sinh viên";
+            this.maSV.Name = "maSV";
             // 
-            // btnXoa
+            // tenSV
             // 
-            this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.Black;
-            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(1035, 157);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(92, 39);
-            this.btnXoa.TabIndex = 36;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.tenSV.DataPropertyName = "tenSV";
+            this.tenSV.HeaderText = "Tên sinh viên";
+            this.tenSV.Name = "tenSV";
             // 
-            // btnSua
+            // tenKhoa
             // 
-            this.btnSua.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.ForeColor = System.Drawing.Color.Black;
-            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
-            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(1035, 67);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(92, 39);
-            this.btnSua.TabIndex = 35;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
+            this.tenKhoa.DataPropertyName = "tenKhoa";
+            this.tenKhoa.HeaderText = "Tên Khoa";
+            this.tenKhoa.Name = "tenKhoa";
             // 
-            // btnThemmoi
+            // lop
             // 
-            this.btnThemmoi.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemmoi.ForeColor = System.Drawing.Color.Black;
-            this.btnThemmoi.Image = ((System.Drawing.Image)(resources.GetObject("btnThemmoi.Image")));
-            this.btnThemmoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemmoi.Location = new System.Drawing.Point(1035, 22);
-            this.btnThemmoi.Name = "btnThemmoi";
-            this.btnThemmoi.Size = new System.Drawing.Size(92, 39);
-            this.btnThemmoi.TabIndex = 34;
-            this.btnThemmoi.Text = "Thêm mới";
-            this.btnThemmoi.UseVisualStyleBackColor = true;
-            this.btnThemmoi.Click += new System.EventHandler(this.btnThemmoi_Click);
+            this.lop.DataPropertyName = "lop";
+            this.lop.HeaderText = "Lớp";
+            this.lop.Name = "lop";
+            // 
+            // nienKhoa
+            // 
+            this.nienKhoa.DataPropertyName = "nienKhoa";
+            this.nienKhoa.HeaderText = "Niên khóa";
+            this.nienKhoa.Name = "nienKhoa";
+            // 
+            // ghiChu
+            // 
+            this.ghiChu.DataPropertyName = "ghiChu";
+            this.ghiChu.HeaderText = "Ghi chú";
+            this.ghiChu.Name = "ghiChu";
+            // 
+            // btnluu
+            // 
+            this.btnluu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnluu.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnluu.Image = ((System.Drawing.Image)(resources.GetObject("btnluu.Image")));
+            this.btnluu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnluu.Location = new System.Drawing.Point(1035, 202);
+            this.btnluu.Name = "btnluu";
+            this.btnluu.Size = new System.Drawing.Size(92, 39);
+            this.btnluu.TabIndex = 38;
+            this.btnluu.Text = "Lưu";
+            this.btnluu.UseVisualStyleBackColor = true;
+            this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
+            // 
+            // btndeletesv
+            // 
+            this.btndeletesv.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btndeletesv.ForeColor = System.Drawing.Color.Black;
+            this.btndeletesv.Image = ((System.Drawing.Image)(resources.GetObject("btndeletesv.Image")));
+            this.btndeletesv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btndeletesv.Location = new System.Drawing.Point(1035, 157);
+            this.btndeletesv.Name = "btndeletesv";
+            this.btndeletesv.Size = new System.Drawing.Size(92, 39);
+            this.btndeletesv.TabIndex = 36;
+            this.btndeletesv.Text = "Xóa";
+            this.btndeletesv.UseVisualStyleBackColor = true;
+            this.btndeletesv.Click += new System.EventHandler(this.btndeletesv_Click);
+            // 
+            // btneditsv
+            // 
+            this.btneditsv.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneditsv.ForeColor = System.Drawing.Color.Black;
+            this.btneditsv.Image = ((System.Drawing.Image)(resources.GetObject("btneditsv.Image")));
+            this.btneditsv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btneditsv.Location = new System.Drawing.Point(1035, 67);
+            this.btneditsv.Name = "btneditsv";
+            this.btneditsv.Size = new System.Drawing.Size(92, 39);
+            this.btneditsv.TabIndex = 35;
+            this.btneditsv.Text = "Sửa";
+            this.btneditsv.UseVisualStyleBackColor = true;
+            this.btneditsv.Click += new System.EventHandler(this.btneditsv_Click);
+            // 
+            // btnaddsv
+            // 
+            this.btnaddsv.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnaddsv.ForeColor = System.Drawing.Color.Black;
+            this.btnaddsv.Image = ((System.Drawing.Image)(resources.GetObject("btnaddsv.Image")));
+            this.btnaddsv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnaddsv.Location = new System.Drawing.Point(1035, 22);
+            this.btnaddsv.Name = "btnaddsv";
+            this.btnaddsv.Size = new System.Drawing.Size(92, 39);
+            this.btnaddsv.TabIndex = 34;
+            this.btnaddsv.Text = "Thêm mới";
+            this.btnaddsv.UseVisualStyleBackColor = true;
+            this.btnaddsv.Click += new System.EventHandler(this.addsv_Click);
             // 
             // btnHuy
             // 
@@ -188,44 +234,49 @@
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // fQLSV
+            // fkhongdcdk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1128, 523);
             this.Controls.Add(this.btnHuy);
-            this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.btnThemmoi);
+            this.Controls.Add(this.btnluu);
+            this.Controls.Add(this.btndeletesv);
+            this.Controls.Add(this.btneditsv);
+            this.Controls.Add(this.btnaddsv);
             this.Controls.Add(this.gbxChiTiet);
             this.Controls.Add(this.groupBox1);
             this.MinimumSize = new System.Drawing.Size(889, 502);
-            this.Name = "fQLSV";
+            this.Name = "fkhongdcdk";
             this.Text = "Quản lý sinh viên";
-            this.Activated += new System.EventHandler(this.fQLSV_Activated);
-            this.Load += new System.EventHandler(this.fQLSV_Load);
+            this.Load += new System.EventHandler(this.fkhongdcdk_Load);
             this.gbxChiTiet.ResumeLayout(false);
             this.gbxChiTiet.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgrDSSV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtMaSV;
+        private System.Windows.Forms.TextBox txtmasv;
         private System.Windows.Forms.GroupBox gbxChiTiet;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dgrDSSV;
-        private System.Windows.Forms.TextBox txtGhiChu;
+        private System.Windows.Forms.TextBox txtghi;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnThemmoi;
+        private System.Windows.Forms.Button btnluu;
+        private System.Windows.Forms.Button btndeletesv;
+        private System.Windows.Forms.Button btneditsv;
+        private System.Windows.Forms.Button btnaddsv;
         private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maSV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenSV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenKhoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nienKhoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ghiChu;
     }
 }
