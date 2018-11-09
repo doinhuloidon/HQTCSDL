@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -39,20 +40,41 @@ namespace DoAnCuoiKi
         {
             TenDangNhap = txtTenDN.Text.Trim();
             MatKhau = txtMatKhau.Text.Trim();
-
-            if (blQLTK.KiemTraDangNhap(TenDangNhap, MatKhau))
+            try
             {
+                PropertiesCls.connectionStringLogin = "Data Source=192.168.137.1 ;Initial Catalog=DangKyQuanLyMonHoc;Integrated Security = False" + ";User ID=" + TenDangNhap + ";Password=" + MatKhau + ";";
+                QLDangKyMonHocDataContext abc = new QLDangKyMonHocDataContext(PropertiesCls.connectionStringLogin);
                 this.Hide();
                 fMain main = new fMain();
-                main.Show();
+                main.Show();      
             }
-            else
+            catch
             {
                 MessageBox.Show("Tên đăng nhập hoặc mật khẩu không chính xác, vui lòng nhập lại !");
                 txtTenDN.ResetText();
                 txtMatKhau.ResetText();
                 txtTenDN.Focus();
+                PropertiesCls.connectionStringLogin = null;
             }
+           
+
+            //PropertiesCls.connectionStringLogin= "Data Source=192.168.137.1 ;Initial Catalog=DangKyQuanLyMonHoc;Integrated Security = False" + ";User ID=" + TenDangNhap + ";Password=" + MatKhau + ";"; ;
+
+            //SqlConnection cnt = new SqlConnection(PropertiesCls.connectionStringLogin);
+            //try
+            //{
+            //    cnt.Open();
+
+            //    //this.Hide();
+            //    // fMain main = new fMain();
+            //    // main.Show();
+            //    MessageBox.Show("open connection ! ");
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("can not open connection ! ");
+            //}
+
         }
 
     }
