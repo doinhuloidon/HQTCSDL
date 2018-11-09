@@ -33,8 +33,10 @@ namespace DoAnCuoiKi.BS_layer
         }
         public void sualophocphan(string maLop, string phongHoc, string Thu, int TuTiet, int DenTiet, int soLuong, string tgBatDau, string tgKetThuc)
         {
+<<<<<<< HEAD
             //ql.editlhp(maLop, phongHoc, Thu, TuTiet, DenTiet, soLuong, DateTime.Parse(tgBatDau), DateTime.Parse(tgKetThuc));
           //  ql.editlhp(maLop, phongHoc, Thu, TuTiet, DenTiet, soLuong, DateTime.Parse(tgBatDau), DateTime.Parse(tgKetThuc));
+>>>>>>> 9fd05cfa2649765ffd0b8c60a07964a6a4ca7992
         }
         public void xoalhp(string malop)
         {

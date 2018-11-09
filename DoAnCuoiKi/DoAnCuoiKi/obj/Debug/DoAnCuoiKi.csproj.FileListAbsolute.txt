@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Justin Nguyen\Desktop\HCMUTE\Lập trình Windows\Đồ án cuối kì\DoAnCuoiKi\DoAnCuoiKi\bin\Debug\DoAnCuoiKi.exe.config
 C:\Users\Justin Nguyen\Desktop\HCMUTE\Lập trình Windows\Đồ án cuối kì\DoAnCuoiKi\DoAnCuoiKi\bin\Debug\DoAnCuoiKi.exe
 C:\Users\Justin Nguyen\Desktop\HCMUTE\Lập trình Windows\Đồ án cuối kì\DoAnCuoiKi\DoAnCuoiKi\bin\Debug\DoAnCuoiKi.pdb
@@ -953,3 +954,4 @@ E:\Năm 3\DBMS\New folder\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.csp
 E:\Năm 3\DBMS\New folder\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.csproj.CopyComplete
 E:\Năm 3\DBMS\New folder\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.exe
 E:\Năm 3\DBMS\New folder\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.pdb
+>>>>>>> 9fd05cfa2649765ffd0b8c60a07964a6a4ca7992
