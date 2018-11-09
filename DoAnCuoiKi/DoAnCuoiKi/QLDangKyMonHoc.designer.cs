@@ -199,13 +199,6 @@ namespace DoAnCuoiKi
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.editlhp")]
-		public int editlhp([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maLop, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maMon, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(10)")] string phongHoc, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Thu", DbType="NChar(15)")] string thu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TuTiet", DbType="Int")] System.Nullable<int> tuTiet, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DenTiet", DbType="Int")] System.Nullable<int> denTiet, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maGV, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> soLuong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> tgBatDau, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> tgKetThuc)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maLop, maMon, phongHoc, thu, tuTiet, denTiet, maGV, soLuong, tgBatDau, tgKetThuc);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.dskhongdk", IsComposable=true)]
 		public IQueryable<dskhongdkResult> dskhongdk()
 		{
@@ -234,7 +227,7 @@ namespace DoAnCuoiKi
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.editlhp")]
-		public int editlhp1([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maLop, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(10)")] string phongHoc, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Thu", DbType="NChar(15)")] string thu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TuTiet", DbType="Int")] System.Nullable<int> tuTiet, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DenTiet", DbType="Int")] System.Nullable<int> denTiet, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> soLuong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> tgBatDau, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> tgKetThuc)
+		public int editlhp([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maLop, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(10)")] string phongHoc, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Thu", DbType="NChar(15)")] string thu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TuTiet", DbType="Int")] System.Nullable<int> tuTiet, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DenTiet", DbType="Int")] System.Nullable<int> denTiet, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> soLuong, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> tgBatDau, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> tgKetThuc)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maLop, phongHoc, thu, tuTiet, denTiet, soLuong, tgBatDau, tgKetThuc);
 			return ((int)(result.ReturnValue));

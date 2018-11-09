@@ -177,19 +177,6 @@
     <Parameter Name="tgKetThuc" Type="System.DateTime" DbType="Date" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.editlhp" Method="editlhp">
-    <Parameter Name="maLop" Type="System.String" DbType="NChar(20)" />
-    <Parameter Name="maMon" Type="System.String" DbType="NChar(20)" />
-    <Parameter Name="phongHoc" Type="System.String" DbType="NChar(10)" />
-    <Parameter Name="Thu" Parameter="thu" Type="System.String" DbType="NChar(15)" />
-    <Parameter Name="TuTiet" Parameter="tuTiet" Type="System.Int32" DbType="Int" />
-    <Parameter Name="DenTiet" Parameter="denTiet" Type="System.Int32" DbType="Int" />
-    <Parameter Name="maGV" Type="System.String" DbType="NChar(20)" />
-    <Parameter Name="soLuong" Type="System.Int32" DbType="Int" />
-    <Parameter Name="tgBatDau" Type="System.DateTime" DbType="Date" />
-    <Parameter Name="tgKetThuc" Type="System.DateTime" DbType="Date" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.dskhongdk" Method="dskhongdk" IsComposable="true">
     <ElementType Name="dskhongdkResult">
       <Column Name="maSV" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
@@ -214,7 +201,7 @@
     <Parameter Name="ghichu" Type="System.String" DbType="NVarChar(MAX)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.editlhp" Method="editlhp1">
+  <Function Name="dbo.editlhp" Method="editlhp">
     <Parameter Name="maLop" Type="System.String" DbType="NChar(20)" />
     <Parameter Name="phongHoc" Type="System.String" DbType="NChar(10)" />
     <Parameter Name="Thu" Parameter="thu" Type="System.String" DbType="NChar(15)" />
