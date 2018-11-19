@@ -12,8 +12,7 @@ namespace DoAnCuoiKi
 {
     public partial class TCLHocPhan : Form
     {
-        BLTCLHocPhan dbcn = new BLTCLHocPhan();
-        bool them = false;
+        QLDangKyMonHocDataContext qlMH = new QLDangKyMonHocDataContext();
         public TCLHocPhan()
         {
             InitializeComponent();
@@ -22,38 +21,34 @@ namespace DoAnCuoiKi
         {       
             try
             {
-                dgv.DataSource = dbcn.Laylhp();
+                dgv.DataSource = qlMH.Lop_hoc_phan();
                 dgv.AutoResizeColumns();
             }
             catch
             {
-                MessageBox.Show("Không tìm thấy nộ");
+                MessageBox.Show("Không tìm thấy nội dung!");
                 return;
             }
         }
 
-        private void btntimkiem_Click(object sender, EventArgs e)
+        private void btnTimKiem_Click(object sender, EventArgs e)
         {
             try
             {
 
-                if (cbbtk.Text == "Tên Môn")
+                if (cbbLoai.Text == "Tên Môn")
                 {
-                    dgv.DataSource = dbcn.tklhptenmon(txttk.Text.Trim());
+                    dgv.DataSource = qlMH.Tim_hoc_phan_theo_ten(txtTimKiem.Text.Trim());
                 }
-                else if (cbbtk.Text == "Mã Môn")
+                else if (cbbLoai.Text == "Mã Môn")
                 {
-                    dgv.DataSource = dbcn.tklhpmamon(txttk.Text.Trim());
-                }
-                else
-                {
-                    dgv.DataSource = dbcn.tklhpkhoa(txttk.Text.Trim());
+                    dgv.DataSource = qlMH.Tim_hoc_phan_theo_ma_mon(txtTimKiem.Text.Trim());
                 }
                 dgv.AutoResizeColumns();
             }
             catch
             {
-
+                MessageBox.Show("Không Tìm Thấy!!!");
             }
 
 

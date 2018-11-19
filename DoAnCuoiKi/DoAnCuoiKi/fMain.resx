@@ -550,7 +550,7 @@
     <value>7</value>
   </data>
   <data name="btnDSC.Text" xml:space="preserve">
-    <value>Danh sách không được đăng ký</value>
+    <value>Danh sách sinh viên</value>
   </data>
   <data name="&gt;&gt;btnDSC.Name" xml:space="preserve">
     <value>btnDSC</value>

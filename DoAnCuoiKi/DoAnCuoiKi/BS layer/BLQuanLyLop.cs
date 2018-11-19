@@ -19,16 +19,13 @@ namespace DoAnCuoiKi.BS_layer
         }
         public DataSet LayLop()
         {
-            string sqlString = "select maLop,maMon,phongHoc,Thu,TuTiet,DenTiet,maGV,soLuong,tgBatDau,tgKetThuc from LopHocPhan";
-                //"select Lop.MaLop,Lop.TenLop,Lop.MaChuyenNganh,ChuyenNganh.MaKhoa " +
-                //"from Lop inner join ChuyenNganh on Lop.MaChuyenNganh=ChuyenNganh.MaChuyenNganh " 
-                //+ "Where Lop.MaChuyenNganh Like '%" + maChuyenNganh + "%' And ChuyenNganh.MaKhoa Like '%" + maKhoa + "%'";
+            string sqlString = "select * from Mon_hoc;";           
             return dbMain.ExecuteQueryDataSet(sqlString, CommandType.Text);
         }
-        public bool ThemLop(string maLop, string tenLop, string maChuyenNganh, ref string err)
+        public DataSet LayGiaoVien()
         {
-            string sqlString = "Insert Into Lop Values(" + "'" + maLop + "',N'" + tenLop + "','" + maChuyenNganh + "')";
-            return dbMain.ExecuteNonQuery(sqlString, CommandType.Text, ref err);
+            string sqlString = "select* from Giao_vien";
+            return dbMain.ExecuteQueryDataSet(sqlString, CommandType.Text);
         }
         public bool XoaLop(string maLop, ref string err)
         {

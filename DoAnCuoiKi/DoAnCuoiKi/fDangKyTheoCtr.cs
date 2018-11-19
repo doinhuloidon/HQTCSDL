@@ -25,6 +25,7 @@ namespace DoAnCuoiKi
             {
                 dgrDanhSach.DataSource = qlMH.Chuong_trinh_theo_ke_hoach(PropertiesCls.tenDangNhap);
                 dgrTinChi.DataSource = qlMH.Mon_dang_ky(PropertiesCls.tenDangNhap);
+                label1.Text = "Số tín chỉ đã đăng ký: " + qlMH.Dem_so_tin_chi(PropertiesCls.tenDangNhap) + " tín chỉ";
             }
             catch
             {
@@ -40,8 +41,8 @@ namespace DoAnCuoiKi
 
                 int r = dgrDanhSach.CurrentCell.RowIndex;           
                 qlMH.Dang_ky_mon_hoc(PropertiesCls.tenDangNhap, dgrDanhSach.Rows[r].Cells[2].Value.ToString().Trim());
+                LoadData();
             }
-            //LoadData();
         }
         private void dgrTinChi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -57,13 +58,20 @@ namespace DoAnCuoiKi
                 {
                     qlMH.Xoa_mon_dang_ky(PropertiesCls.tenDangNhap, dgrTinChi.Rows[r].Cells[2].Value.ToString().Trim());
                 }
+                LoadData();
             }
             if (e.ColumnIndex == 0 && e.RowIndex >= 0)
             {
                 int r = dgrTinChi.CurrentCell.RowIndex;
-                qlMH.Xoa_mon_dang_ky(PropertiesCls.tenDangNhap, dgrTinChi.Rows[r].Cells[2].Value.ToString().Trim());
+                string s = dgrTinChi.Rows[r].Cells[2].Value.ToString().Trim();
+                fChuyenLop f = new fChuyenLop();
+                f.Text = "Học phần: " + dgrTinChi.Rows[r].Cells[3].Value.ToString().Trim();
+                f.maHP = s.Substring(0, s.Length - 3);
+                f.LoadData();
+                f.Show();
+                f.FormClosed += new FormClosedEventHandler(Form_Closed);
+                LoadData();
             }
-            LoadData();
         }
         private void dgrDanhSach_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
@@ -74,6 +82,10 @@ namespace DoAnCuoiKi
                     dgrDanhSach.Rows[r.Index].Cells[0].Value = (r.Index + 1).ToString();
                 }
             }
+        }
+        void Form_Closed(object sender, FormClosedEventArgs e)
+        {
+            LoadData();
         }
     }
 }

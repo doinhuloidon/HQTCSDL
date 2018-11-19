@@ -9,15 +9,14 @@ namespace DoAnCuoiKi
 {
     static class PropertiesCls
     {
-        private static string DataSource = "192.168.137.1";
+        private static string DataSource = "(local)";
         private static string InitialCatalog = "DangKyQuanLyMonHoc";
         public static string connectionStringNoLogin = "Data Source=" + DataSource + ";Initial Catalog=" + InitialCatalog + ";Integrated Security = True" + ";";
         public static string tenDangNhap;
         public static string matkhau;
-        public static string makhoa;
         public static string quyenDangNhap;
-        public static bool isClosed = false;
-        public static string connectionStringLogin;
+        public static string connectionStringLogin = "Data Source=" + DataSource + "; Initial Catalog =" + InitialCatalog 
+                                        + "; Integrated Security = False" + ";User ID=" + tenDangNhap + ";Password=" + matkhau + ";";
       
     }
 }

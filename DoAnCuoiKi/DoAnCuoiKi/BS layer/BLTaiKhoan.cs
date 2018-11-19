@@ -38,9 +38,10 @@ namespace DoAnCuoiKi.BS_layer
         //        matkhau + "',HoVaTen=N'" + hovaten + "',Quyen=N'" + quyen + "',GioiTinh=N'" + gioitinh + "' Where MaUser='" + maUser + "'";
         //    return dbMain.ExecuteNonQuery(sqlString, CommandType.Text, ref err);
         //}
-        public bool KiemTraDangNhap(string TenDangNhap, string MatKhau)
+        public bool KiemTraDangNhap(string TenDangNhap, string MatKhau, ref string err)
         {
-            string sqlString = "Select * From TaiKhoan";
+            string sqlString = "select * from TaiKhoan left join DanhSachKhongDuocDangKy "
+                               + "on TaiKhoan.tenDangNhap = DanhSachKhongDuocDangKy.maSV";
             sdr = dbMain.ExecuteReader(sqlString, CommandType.Text);
             try
             {
@@ -48,7 +49,15 @@ namespace DoAnCuoiKi.BS_layer
                 {
                     string username = (string)sdr["tenDangNhap"].ToString().Trim();
                     string password = (string)sdr["matkhau"].ToString().Trim();
-                    if (username.ToLower() == TenDangNhap.ToLower() && password.ToLower() == MatKhau.ToLower())
+                    string bannedID = (string)sdr["maSV"].ToString().Trim();
+                    string message = (string)sdr["ghiChu"].ToString().Trim();
+                    if (bannedID.ToLower() == TenDangNhap.ToLower())
+                    {
+                        err = "Tài khoản hiện không thể đăng ký học phần!" +
+                            "\nLý do: " + message;
+                        return false;
+                    }
+                    else if (username.ToLower() == TenDangNhap.ToLower() && password.ToLower() == MatKhau.ToLower())
                     {
                         PropertiesCls.tenDangNhap = sdr["tenDangNhap"].ToString().Trim();
                         PropertiesCls.matkhau = sdr["matKhau"].ToString().Trim();
@@ -56,13 +65,13 @@ namespace DoAnCuoiKi.BS_layer
                         return true;
                     }
                 }
+                throw new Exception();
             }
             catch
             {
+                err = "Tên đăng nhập hoặc mật khẩu không chính xác, vui lòng nhập lại !";
                 return false;
             }
-
-            return false;
         }
         //public bool ktrathem(string MaNguoiDung,string TenDN)
         //{

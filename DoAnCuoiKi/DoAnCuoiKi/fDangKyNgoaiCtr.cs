@@ -25,6 +25,7 @@ namespace DoAnCuoiKi
             {
                 this.dgrDanhSach.DataSource = qlMH.Chuong_trinh_ngoai_ke_hoach(PropertiesCls.tenDangNhap);
                 this.dgrTinChi.DataSource = qlMH.Mon_dang_ky(PropertiesCls.tenDangNhap);
+                label1.Text = "Số tín chỉ đã đăng ký: " + qlMH.Dem_so_tin_chi(PropertiesCls.tenDangNhap) + " tín chỉ";
             }
             catch
             {
@@ -49,13 +50,12 @@ namespace DoAnCuoiKi
             {
                 int r = dgrDanhSach.CurrentCell.RowIndex;
                 qlMH.Dang_ky_mon_hoc(PropertiesCls.tenDangNhap, dgrDanhSach.Rows[r].Cells[2].Value.ToString().Trim());
+                LoadData();
             }
-            LoadData();
         }
         private void dgrTinChi_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgrTinChi.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
-               e.RowIndex >= 0)
+            if (e.ColumnIndex == 1 && e.RowIndex >= 0)
             {
                 int r = dgrTinChi.CurrentCell.RowIndex;
                 DialogResult traloi;
@@ -67,7 +67,23 @@ namespace DoAnCuoiKi
                 {
                     qlMH.Xoa_mon_dang_ky(PropertiesCls.tenDangNhap, dgrTinChi.Rows[r].Cells[2].Value.ToString().Trim());
                 }
+                LoadData();
             }
+            if (e.ColumnIndex == 0 && e.RowIndex >= 0)
+            {
+                int r = dgrTinChi.CurrentCell.RowIndex;
+                string s = dgrTinChi.Rows[r].Cells[2].Value.ToString().Trim();
+                fChuyenLop f = new fChuyenLop();
+                f.Text = "Học phần: " + dgrTinChi.Rows[r].Cells[3].Value.ToString().Trim();
+                f.maHP = s.Substring(0, s.Length - 3);
+                f.LoadData();
+                f.Show();
+                f.FormClosed += new FormClosedEventHandler(Form_Closed);
+                LoadData();
+            }
+        }
+        void Form_Closed(object sender, FormClosedEventArgs e)
+        {
             LoadData();
         }
     }

@@ -16,7 +16,7 @@ namespace DoAnCuoiKi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DoAnCuoiKi.fChuyenLop());
+            Application.Run(new DoAnCuoiKi.fDangNhap());
         }
     }
 }

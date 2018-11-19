@@ -129,6 +129,9 @@
             // dgrMonHoc
             // 
             this.dgrMonHoc.AllowUserToAddRows = false;
+            this.dgrMonHoc.AllowUserToDeleteRows = false;
+            this.dgrMonHoc.AllowUserToResizeColumns = false;
+            this.dgrMonHoc.AllowUserToResizeRows = false;
             this.dgrMonHoc.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgrMonHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrMonHoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

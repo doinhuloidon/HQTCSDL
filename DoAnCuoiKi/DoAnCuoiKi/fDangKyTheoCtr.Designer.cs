@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.dgrDanhSach = new System.Windows.Forms.DataGridView();
-            this.dgrTinChi = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +40,7 @@
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column18 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dgrTinChi = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +49,8 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column19 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgrDanhSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgrTinChi)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -59,6 +59,9 @@
             // dgrDanhSach
             // 
             this.dgrDanhSach.AllowUserToAddRows = false;
+            this.dgrDanhSach.AllowUserToDeleteRows = false;
+            this.dgrDanhSach.AllowUserToResizeColumns = false;
+            this.dgrDanhSach.AllowUserToResizeRows = false;
             this.dgrDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgrDanhSach.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgrDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -81,51 +84,6 @@
             this.dgrDanhSach.TabIndex = 0;
             this.dgrDanhSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrDanhSach_CellContentClick);
             this.dgrDanhSach.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgrDanhSach_DataBindingComplete);
-            // 
-            // dgrTinChi
-            // 
-            this.dgrTinChi.AllowUserToAddRows = false;
-            this.dgrTinChi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dgrTinChi.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dgrTinChi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgrTinChi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column6,
-            this.Column4,
-            this.Column5,
-            this.Column19,
-            this.Column7});
-            this.dgrTinChi.Location = new System.Drawing.Point(0, 23);
-            this.dgrTinChi.Name = "dgrTinChi";
-            this.dgrTinChi.ReadOnly = true;
-            this.dgrTinChi.RowHeadersVisible = false;
-            this.dgrTinChi.Size = new System.Drawing.Size(1125, 174);
-            this.dgrTinChi.TabIndex = 1;
-            this.dgrTinChi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrTinChi_CellContentClick);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.dgrTinChi);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(0, 327);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1125, 200);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Phiếu đăng ký môn học";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(166, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Số tín chỉ đã đăng ký: 0 tín chỉ";
             // 
             // Column8
             // 
@@ -221,8 +179,35 @@
             this.Column18.UseColumnTextForButtonValue = true;
             this.Column18.Width = 54;
             // 
+            // dgrTinChi
+            // 
+            this.dgrTinChi.AllowUserToAddRows = false;
+            this.dgrTinChi.AllowUserToDeleteRows = false;
+            this.dgrTinChi.AllowUserToResizeColumns = false;
+            this.dgrTinChi.AllowUserToResizeRows = false;
+            this.dgrTinChi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgrTinChi.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgrTinChi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgrTinChi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column6,
+            this.Column4,
+            this.Column5,
+            this.Column19,
+            this.Column7});
+            this.dgrTinChi.Location = new System.Drawing.Point(0, 23);
+            this.dgrTinChi.Name = "dgrTinChi";
+            this.dgrTinChi.ReadOnly = true;
+            this.dgrTinChi.RowHeadersVisible = false;
+            this.dgrTinChi.Size = new System.Drawing.Size(1125, 174);
+            this.dgrTinChi.TabIndex = 1;
+            this.dgrTinChi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrTinChi_CellContentClick);
+            // 
             // Column1
             // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.Column1.DataPropertyName = "maLop";
             this.Column1.FillWeight = 92.978F;
             this.Column1.HeaderText = "Mã Lớp HP";
@@ -286,6 +271,7 @@
             this.Column19.HeaderText = "Chuyển Lớp";
             this.Column19.Name = "Column19";
             this.Column19.ReadOnly = true;
+            this.Column19.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Column19.Text = "Chuyển lớp";
             this.Column19.UseColumnTextForButtonValue = true;
             this.Column19.Width = 78;
@@ -300,6 +286,28 @@
             this.Column7.Text = "Xóa đăng ký";
             this.Column7.UseColumnTextForButtonValue = true;
             this.Column7.Width = 84;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.dgrTinChi);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(0, 327);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1125, 200);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Phiếu đăng ký môn học";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(166, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(217, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Số tín chỉ đã đăng ký: 0 tín chỉ";
             // 
             // fDangKyTheoCtr
             // 
