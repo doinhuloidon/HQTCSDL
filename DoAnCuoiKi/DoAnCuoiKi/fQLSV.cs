@@ -1,15 +1,13 @@
-﻿using DoAnCuoiKi.BS_layer;
-using DoAnCuoiKi.DB_layer;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DoAnCuoiKi.BS_layer;
 
 namespace DoAnCuoiKi
 {
@@ -70,19 +68,6 @@ namespace DoAnCuoiKi
             btnHuy.Enabled = true;
         }   
 
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            Them = false;
-            gbxChiTiet.Enabled = true;
-            txtMaSV.Enabled = false;
-            txtTenSV.Focus();
-            btnSua.Enabled = false;
-            btnThemmoi.Enabled = false;
-            btnXoa.Enabled = false;
-            btnLuu.Enabled = true;
-            btnHuy.Enabled = true;
-        }
-
         private void dgrDSSV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (!Them)
@@ -95,18 +80,6 @@ namespace DoAnCuoiKi
                 txtNienKhoa.Text = dgrDSSV.Rows[r].Cells[7].Value.ToString().Trim();
                 txtMatKhau.Text = dgrDSSV.Rows[r].Cells[4].Value.ToString().Trim();
             }
-        }
-
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            Them = false;
-            ResetText();
-            gbxChiTiet.Enabled = false;
-            btnSua.Enabled = true;
-            btnThemmoi.Enabled = true;
-            btnXoa.Enabled = true;
-            btnLuu.Enabled = false;
-            btnHuy.Enabled = false;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)

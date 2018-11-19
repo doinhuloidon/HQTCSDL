@@ -1,6 +1,6 @@
 ﻿namespace DoAnCuoiKi
 {
-    partial class fQLSV
+    partial class fkhongdcdk
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fQLSV));
-            this.txtMaSV = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fkhongdcdk));
+            this.txtmasv = new System.Windows.Forms.TextBox();
             this.gbxChiTiet = new System.Windows.Forms.GroupBox();
             this.cbbKhoa = new System.Windows.Forms.ComboBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
@@ -61,10 +61,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gbxChiTiet.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgrDSSV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtMaSV
+            // txtmasv
             // 
             this.txtMaSV.Location = new System.Drawing.Point(217, 22);
             this.txtMaSV.Name = "txtMaSV";
@@ -392,20 +392,19 @@
             this.Controls.Add(this.btnThemmoi);
             this.Controls.Add(this.groupBox1);
             this.MinimumSize = new System.Drawing.Size(889, 502);
-            this.Name = "fQLSV";
+            this.Name = "fkhongdcdk";
             this.Text = "Quản lý sinh viên";
             this.gbxChiTiet.ResumeLayout(false);
             this.gbxChiTiet.PerformLayout();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgrDSSV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtMaSV;
+        private System.Windows.Forms.TextBox txtmasv;
         private System.Windows.Forms.GroupBox gbxChiTiet;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
