@@ -96,16 +96,17 @@ C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
-C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.csprojAssemblyReference.cache
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.exe.config
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\Interop.LCC11.dll
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.csproj.ResolveComReference.cache
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.fChuyenLop.resources
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.fDangKyNgoaiCtr.resources
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.fDangKyTheoCtr.resources
+C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.fDangNhap.resources
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.fLop.resources
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.fMain.resources
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.fQLSV.resources
+C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.fGhiChu.resources
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.Properties.Resources.resources
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.TCLHocPhan.resources
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.csproj.GenerateResource.cache
@@ -113,5 +114,4 @@ C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.csproj.CopyComplete
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.exe
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.pdb
-C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.fDangNhap.resources
-C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.fGhiChu.resources
+C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.csprojAssemblyReference.cache

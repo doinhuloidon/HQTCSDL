@@ -21,29 +21,29 @@ namespace DoAnCuoiKi
         BLTaiKhoan blQLTK = new BLTaiKhoan();
         public fDangNhap()
         {
-            InitializeComponent();
-            Process netUtility = new Process();
-            netUtility.StartInfo.FileName = "net.exe";
-            netUtility.StartInfo.CreateNoWindow = true;
-            netUtility.StartInfo.Arguments = "view";
-            netUtility.StartInfo.RedirectStandardOutput = true;
-            netUtility.StartInfo.UseShellExecute = false;
-            netUtility.StartInfo.RedirectStandardError = true;
-            netUtility.Start();
-            StreamReader streamReader = new StreamReader(netUtility.StandardOutput.BaseStream, netUtility.StandardOutput.CurrentEncoding);
-            string line = "";
-            while ((line = streamReader.ReadLine()) != null)
-            {
-                if (line.StartsWith("\\"))
-                {
-                    ComboboxItem item = new ComboboxItem();
-                    item.Text = line.Substring(2).Substring(0, line.Substring(2).IndexOf(" ")).ToUpper();
-                    item.Value = Convert.ToString(Dns.GetHostByName(line.Substring(2).Substring(0, line.Substring(2).IndexOf(" ")).ToUpper()).AddressList[0].ToString());
-                    cbbIP.Items.Add(item);
-                }
-            }
-            streamReader.Close();
-            netUtility.WaitForExit(1000);
+            //InitializeComponent();
+            //Process netUtility = new Process();
+            //netUtility.StartInfo.FileName = "net.exe";
+            //netUtility.StartInfo.CreateNoWindow = true;
+            //netUtility.StartInfo.Arguments = "view";
+            //netUtility.StartInfo.RedirectStandardOutput = true;
+            //netUtility.StartInfo.UseShellExecute = false;
+            //netUtility.StartInfo.RedirectStandardError = true;
+            //netUtility.Start();
+            //StreamReader streamReader = new StreamReader(netUtility.StandardOutput.BaseStream, netUtility.StandardOutput.CurrentEncoding);
+            //string line = "";
+            //while ((line = streamReader.ReadLine()) != null)
+            //{
+            //    if (line.StartsWith("\\"))
+            //    {
+            //        ComboboxItem item = new ComboboxItem();
+            //        item.Text = line.Substring(2).Substring(0, line.Substring(2).IndexOf(" ")).ToUpper();
+            //        item.Value = Convert.ToString(Dns.GetHostByName(line.Substring(2).Substring(0, line.Substring(2).IndexOf(" ")).ToUpper()).AddressList[0].ToString());
+            //        cbbIP.Items.Add(item);
+            //    }
+            //}
+            //streamReader.Close();
+            //netUtility.WaitForExit(1000);
         }
 
         private string tenDangNhap;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -166,6 +167,34 @@ namespace DoAnCuoiKi
         void Form_Closed(object sender, FormClosedEventArgs e)
         {
             LoadData();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            Them = false;
+            btnLuu.Enabled = true;
+            btnHuy.Enabled = true;
+
+            btnThemmoi.Enabled = false;
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            gbxChiTiet.Enabled = true;
+            this.txtMaSV.Enabled = false;
+            txtTenSV.Focus();
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            ResetText();
+            btnThemmoi.Enabled = true;
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
+            btnLuu.Enabled = false;
+            btnHuy.Enabled = false;
+            gbxChiTiet.Enabled = false;
+            Them = false;
+            LoadData();
+            dgrDSSV_CellClick(null, null);
         }
     }
 }
