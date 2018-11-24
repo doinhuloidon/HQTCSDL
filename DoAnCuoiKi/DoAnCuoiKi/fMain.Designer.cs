@@ -104,6 +104,7 @@
             resources.ApplyResources(this.btnTKB, "btnTKB");
             this.btnTKB.Name = "btnTKB";
             this.btnTKB.UseVisualStyleBackColor = true;
+            this.btnTKB.Click += new System.EventHandler(this.btnTKB_Click);
             // 
             // btnTCHP
             // 

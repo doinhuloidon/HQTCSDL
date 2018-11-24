@@ -8,13 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DoAnCuoiKi.BS_layer;
 
 namespace DoAnCuoiKi
 {
     public partial class fLop : Form
     {
-        QLDangKyMonHocDataContext qlMH = new QLDangKyMonHocDataContext();
+        QLDangKyMonHocDataContext qlMH = new QLDangKyMonHocDataContext(PropertiesCls.connectionStringLogin);
         bool Them;
         public fLop()
         {

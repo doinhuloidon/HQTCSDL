@@ -309,4 +309,20 @@
     <Parameter Name="ghiChu" Type="System.String" DbType="NVarChar(MAX)" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.Lay_quyen_dang_nhap" Method="Lay_quyen_dang_nhap" IsComposable="true">
+    <Parameter Name="maSV" Type="System.String" DbType="NChar(20)" />
+    <Return Type="System.Char" />
+  </Function>
+  <Function Name="dbo.Thoi_khoa_bieu" Method="Thoi_khoa_bieu">
+    <Parameter Name="mssv" Type="System.String" DbType="NChar(20)" />
+    <ElementType Name="Thoi_khoa_bieuResult">
+      <Column Name="phongHoc" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="thu2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="thu3" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="thu4" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="thu5" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="thu6" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="thu7" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

@@ -324,6 +324,19 @@ namespace DoAnCuoiKi
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSV, ghiChu);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Lay_quyen_dang_nhap", IsComposable=true)]
+		public System.Nullable<char> Lay_quyen_dang_nhap([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string maSV)
+		{
+			return ((System.Nullable<char>)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maSV).ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Thoi_khoa_bieu")]
+		public ISingleResult<Thoi_khoa_bieuResult> Thoi_khoa_bieu([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NChar(20)")] string mssv)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), mssv);
+			return ((ISingleResult<Thoi_khoa_bieuResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ChuongTrinhDaoTao")]
@@ -3719,6 +3732,140 @@ namespace DoAnCuoiKi
 				if ((this._ghiChu != value))
 				{
 					this._ghiChu = value;
+				}
+			}
+		}
+	}
+	
+	public partial class Thoi_khoa_bieuResult
+	{
+		
+		private string _phongHoc;
+		
+		private string _thu2;
+		
+		private string _thu3;
+		
+		private string _thu4;
+		
+		private string _thu5;
+		
+		private string _thu6;
+		
+		private string _thu7;
+		
+		public Thoi_khoa_bieuResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phongHoc", DbType="NChar(10)")]
+		public string phongHoc
+		{
+			get
+			{
+				return this._phongHoc;
+			}
+			set
+			{
+				if ((this._phongHoc != value))
+				{
+					this._phongHoc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_thu2", DbType="NVarChar(100)")]
+		public string thu2
+		{
+			get
+			{
+				return this._thu2;
+			}
+			set
+			{
+				if ((this._thu2 != value))
+				{
+					this._thu2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_thu3", DbType="NVarChar(100)")]
+		public string thu3
+		{
+			get
+			{
+				return this._thu3;
+			}
+			set
+			{
+				if ((this._thu3 != value))
+				{
+					this._thu3 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_thu4", DbType="NVarChar(100)")]
+		public string thu4
+		{
+			get
+			{
+				return this._thu4;
+			}
+			set
+			{
+				if ((this._thu4 != value))
+				{
+					this._thu4 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_thu5", DbType="NVarChar(100)")]
+		public string thu5
+		{
+			get
+			{
+				return this._thu5;
+			}
+			set
+			{
+				if ((this._thu5 != value))
+				{
+					this._thu5 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_thu6", DbType="NVarChar(100)")]
+		public string thu6
+		{
+			get
+			{
+				return this._thu6;
+			}
+			set
+			{
+				if ((this._thu6 != value))
+				{
+					this._thu6 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_thu7", DbType="NVarChar(100)")]
+		public string thu7
+		{
+			get
+			{
+				return this._thu7;
+			}
+			set
+			{
+				if ((this._thu7 != value))
+				{
+					this._thu7 = value;
 				}
 			}
 		}

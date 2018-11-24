@@ -8,14 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DoAnCuoiKi.BS_layer;
 
 namespace DoAnCuoiKi
 {
     public partial class fQLSV : Form
     {
         bool Them;
-        QLDangKyMonHocDataContext qlMH = new QLDangKyMonHocDataContext();
+        QLDangKyMonHocDataContext qlMH = new QLDangKyMonHocDataContext(PropertiesCls.connectionStringLogin);
         public fQLSV()
         {
             InitializeComponent();

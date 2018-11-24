@@ -12,7 +12,7 @@ namespace DoAnCuoiKi
 {
     public partial class fChuyenLop : Form
     {
-        QLDangKyMonHocDataContext qlMH = new QLDangKyMonHocDataContext();
+        QLDangKyMonHocDataContext qlMH = new QLDangKyMonHocDataContext(PropertiesCls.connectionStringLogin);
         public string maHP;
         public fChuyenLop()
         {

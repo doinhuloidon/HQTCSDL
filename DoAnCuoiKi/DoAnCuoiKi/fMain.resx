@@ -514,7 +514,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnLHP.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 372</value>
+    <value>0, 62</value>
   </data>
   <data name="btnLHP.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 56</value>
@@ -541,7 +541,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnDSC.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 310</value>
+    <value>0, 0</value>
   </data>
   <data name="btnDSC.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 56</value>
@@ -729,6 +729,42 @@
   <metadata name="stt.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="maMH.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="tenMH.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="loaiMon.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="soTC.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dgrMonHoc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>143, 99</value>
+  </data>
+  <data name="dgrMonHoc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1132, 536</value>
+  </data>
+  <data name="dgrMonHoc.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;dgrMonHoc.Name" xml:space="preserve">
+    <value>dgrMonHoc</value>
+  </data>
+  <data name="&gt;&gt;dgrMonHoc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgrMonHoc.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dgrMonHoc.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="stt.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="stt.HeaderText" xml:space="preserve">
     <value>STT</value>
   </data>
@@ -764,27 +800,6 @@
   </data>
   <data name="soTC.Width" type="System.Int32, mscorlib">
     <value>150</value>
-  </data>
-  <data name="dgrMonHoc.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 99</value>
-  </data>
-  <data name="dgrMonHoc.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1132, 536</value>
-  </data>
-  <data name="dgrMonHoc.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;dgrMonHoc.Name" xml:space="preserve">
-    <value>dgrMonHoc</value>
-  </data>
-  <data name="&gt;&gt;dgrMonHoc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dgrMonHoc.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dgrMonHoc.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

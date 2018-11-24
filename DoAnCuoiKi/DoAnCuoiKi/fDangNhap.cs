@@ -1,5 +1,4 @@
-﻿using DoAnCuoiKi.BS_layer;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,10 +17,10 @@ namespace DoAnCuoiKi
 {
     public partial class fDangNhap : Form
     {
-        BLTaiKhoan blQLTK = new BLTaiKhoan();
+        QLDangKyMonHocDataContext qlMH = new QLDangKyMonHocDataContext();
         public fDangNhap()
         {
-            //InitializeComponent();
+            InitializeComponent();
             //Process netUtility = new Process();
             //netUtility.StartInfo.FileName = "net.exe";
             //netUtility.StartInfo.CreateNoWindow = true;
@@ -37,7 +36,7 @@ namespace DoAnCuoiKi
             //    if (line.StartsWith("\\"))
             //    {
             //        ComboboxItem item = new ComboboxItem();
-            //        item.Text = line.Substring(2).Substring(0, line.Substring(2).IndexOf(" ")).ToUpper();
+            //        item.Text = Convert.ToString(line.Substring(2).Substring(0, line.Substring(2).IndexOf(" ")).ToUpper());
             //        item.Value = Convert.ToString(Dns.GetHostByName(line.Substring(2).Substring(0, line.Substring(2).IndexOf(" ")).ToUpper()).AddressList[0].ToString());
             //        cbbIP.Items.Add(item);
             //    }
@@ -49,7 +48,6 @@ namespace DoAnCuoiKi
         private string tenDangNhap;
         private string matKhau;
         private string dataSource;
-        private string err = "";
         private void btnThoat_Click(object sender, EventArgs e)
         {
             DialogResult traloi;
@@ -68,28 +66,12 @@ namespace DoAnCuoiKi
         {
             tenDangNhap = txtTenDN.Text.Trim();
             matKhau = txtMatKhau.Text.Trim();
-            dataSource = cbbIP.SelectedValue.ToString();
-            //try
-            //{
-            //    if (blQLTK.KiemTraDangNhap("16110124", "123", ref err))
-            //    {
-            //        this.Hide();
-            //        fMain main = new fMain();
-            //        main.Show();
-            //    }
-            //    else
-            //        throw new Exception();
-            //}
-            //catch
-            //{
-            //    MessageBox.Show(err);
-            //    txtTenDN.ResetText();
-            //    txtMatKhau.ResetText();
-            //    txtTenDN.Focus();
-            //    PropertiesCls.connectionStringLogin = null;
-            //}
-            PropertiesCls.connectionStringLogin = "Data Source=" + dataSource + " ; Initial Catalog =DangKyQuanLyMonHoc"
-                                        + "; Integrated Security = False" + ";User ID=" + tenDangNhap + ";Password=" + matKhau + ";";
+            dataSource = cbbIP.Text.ToString().Trim();       
+            PropertiesCls.connectionStringLogin = "Server=" + dataSource +",1433\\sqlexpress; Initial Catalog = DangKyQuanLyMonHoc"
+                                        + ";User ID=" + tenDangNhap +";Password=" + matKhau + ";";
+            PropertiesCls.tenDangNhap = tenDangNhap;
+            PropertiesCls.matkhau = matKhau;
+            PropertiesCls.quyenDangNhap = qlMH.Lay_quyen_dang_nhap(tenDangNhap).ToString();
             SqlConnection cnt = new SqlConnection(PropertiesCls.connectionStringLogin);
             try
             {
@@ -97,7 +79,7 @@ namespace DoAnCuoiKi
                 this.Hide();
                 fMain main = new fMain();
                 main.Show();
-                MessageBox.Show("open connection ! ");
+                MessageBox.Show("Open connection! ");
             }
             catch
             {
@@ -105,7 +87,7 @@ namespace DoAnCuoiKi
                 txtMatKhau.ResetText();
                 txtTenDN.Focus();
                 PropertiesCls.connectionStringLogin = null;
-                MessageBox.Show("Can not open connection ! ");
+                MessageBox.Show("Can not open connection! ");
             }
 
         }

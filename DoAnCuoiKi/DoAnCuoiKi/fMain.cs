@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DoAnCuoiKi.BS_layer;
 
 namespace DoAnCuoiKi
 {
@@ -18,22 +18,30 @@ namespace DoAnCuoiKi
             InitializeComponent();
             LoadData();
         }
-        QLDangKyMonHocDataContext qlMH = new QLDangKyMonHocDataContext();
+        QLDangKyMonHocDataContext qlMH = new QLDangKyMonHocDataContext(PropertiesCls.connectionStringLogin);
         private void LoadData()
         {
-            try
+            if (PropertiesCls.quyenDangNhap == "1")
             {
-                dgrMonHoc.DataSource = qlMH.Chuong_trinh_dao_tao(PropertiesCls.tenDangNhap);
-                if(PropertiesCls.quyenDangNhap=="2")
+                btnDSC.Visible = false;
+                btnLHP.Visible = false;
+                try
                 {
-                    btnDSC.Visible = true;
-                    btnLHP.Visible = true;
+                    dgrMonHoc.DataSource = qlMH.Chuong_trinh_dao_tao(PropertiesCls.tenDangNhap);
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("Không tìm thấy nội dung!");
+                    return;
                 }
             }
-            catch
+            else
             {
-                MessageBox.Show("Không tìm thấy nội dung!");
-                return;
+                btnDKNCT.Visible = false;
+                btnDKTCT.Visible = false;
+                btnTCHP.Visible = false;
+                btnTKB.Visible = false;
+                btnTrangChu.Visible = false;
             }
         }
 
@@ -179,6 +187,27 @@ namespace DoAnCuoiKi
             {
                 ActiveChildForm("fDangKyNgoaiCtr");
                 ((fDangKyNgoaiCtr)this.ActiveMdiChild).LoadData();
+            }
+            this.dgrMonHoc.Visible = false;
+        }
+
+        private void btnTKB_Click(object sender, EventArgs e)
+        {
+            if (!CheckExistForm("fTKB"))
+            {
+                fTKB f = new fTKB();
+                f.MdiParent = this;
+                f.FormBorderStyle = FormBorderStyle.None;
+                f.Dock = DockStyle.Fill;
+                this.dgrMonHoc.Visible = false;
+                f.Show();
+                f.Top = 98;
+                f.Left = 142;
+            }
+            else
+            {
+                ActiveChildForm("fTKB");
+                ((fTKB)this.ActiveMdiChild).LoadData();
             }
             this.dgrMonHoc.Visible = false;
         }

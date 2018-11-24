@@ -32,13 +32,13 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbIP = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTenDN = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cbbIP = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,10 +49,10 @@
             this.btnThoat.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThoat.Location = new System.Drawing.Point(383, 272);
+            this.btnThoat.Location = new System.Drawing.Point(390, 262);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(140, 51);
-            this.btnThoat.TabIndex = 7;
+            this.btnThoat.TabIndex = 11;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -63,10 +63,10 @@
             this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.Image = ((System.Drawing.Image)(resources.GetObject("btnDangNhap.Image")));
             this.btnDangNhap.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnDangNhap.Location = new System.Drawing.Point(209, 272);
+            this.btnDangNhap.Location = new System.Drawing.Point(216, 262);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(136, 51);
-            this.btnDangNhap.TabIndex = 6;
+            this.btnDangNhap.TabIndex = 10;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
@@ -80,11 +80,29 @@
             this.groupBox1.Controls.Add(this.txtTenDN);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(128, 107);
+            this.groupBox1.Location = new System.Drawing.Point(135, 97);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(442, 159);
-            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
+            // 
+            // cbbIP
+            // 
+            this.cbbIP.FormattingEnabled = true;
+            this.cbbIP.Location = new System.Drawing.Point(207, 28);
+            this.cbbIP.Name = "cbbIP";
+            this.cbbIP.Size = new System.Drawing.Size(188, 23);
+            this.cbbIP.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(41, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 15);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Địa chỉ IP";
             // 
             // txtMatKhau
             // 
@@ -130,35 +148,16 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(216, 55);
+            this.label1.Location = new System.Drawing.Point(223, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(295, 26);
-            this.label1.TabIndex = 4;
+            this.label1.TabIndex = 8;
             this.label1.Text = "ĐĂNG NHẬP HỆ THỐNG ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(41, 31);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 15);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Địa chỉ IP";
-            // 
-            // cbbIP
-            // 
-            this.cbbIP.FormattingEnabled = true;
-            this.cbbIP.Location = new System.Drawing.Point(207, 28);
-            this.cbbIP.Name = "cbbIP";
-            this.cbbIP.Size = new System.Drawing.Size(188, 23);
-            this.cbbIP.TabIndex = 9;
             // 
             // fDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(712, 358);
             this.ControlBox = false;
             this.Controls.Add(this.btnThoat);
@@ -180,13 +179,13 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnDangNhap;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox cbbIP;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTenDN;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cbbIP;
     }
 }
 

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DoAnCuoiKi.BS_layer;
 
 namespace DoAnCuoiKi
 {
@@ -18,7 +17,7 @@ namespace DoAnCuoiKi
             InitializeComponent();
             LoadData();
         }
-        QLDangKyMonHocDataContext qlMH = new QLDangKyMonHocDataContext();
+        QLDangKyMonHocDataContext qlMH = new QLDangKyMonHocDataContext(PropertiesCls.connectionStringLogin);
         public void LoadData()
         {
             try
@@ -48,9 +47,16 @@ namespace DoAnCuoiKi
             if (dgrDanhSach.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
-                int r = dgrDanhSach.CurrentCell.RowIndex;
-                qlMH.Dang_ky_mon_hoc(PropertiesCls.tenDangNhap, dgrDanhSach.Rows[r].Cells[2].Value.ToString().Trim());
-                LoadData();
+                try
+                {
+                    int r = dgrDanhSach.CurrentCell.RowIndex;
+                    qlMH.Dang_ky_mon_hoc(PropertiesCls.tenDangNhap, dgrDanhSach.Rows[r].Cells[2].Value.ToString().Trim());
+                    LoadData();
+                }
+                catch
+                {
+                    MessageBox.Show("Không thể đăng ký!");
+                }
             }
         }
         private void dgrTinChi_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -15,8 +15,6 @@ namespace DoAnCuoiKi
         public static string tenDangNhap;
         public static string matkhau;
         public static string quyenDangNhap;
-        public static string connectionStringLogin = "Data Source=" + DataSource + "; Initial Catalog =" + InitialCatalog 
-                                        + "; Integrated Security = False" + ";User ID=" + tenDangNhap + ";Password=" + matkhau + ";";
-      
+        public static string connectionStringLogin;         
     }
 }

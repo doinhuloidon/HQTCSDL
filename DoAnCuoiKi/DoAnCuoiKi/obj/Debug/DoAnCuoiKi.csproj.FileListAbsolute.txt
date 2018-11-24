@@ -115,3 +115,4 @@ C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.exe
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.pdb
 C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.csprojAssemblyReference.cache
+C:\Users\doinh\Desktop\DoAnCuoiKi_16110318_16110355_16110451\HQTCSDL\DoAnCuoiKi\DoAnCuoiKi\obj\Debug\DoAnCuoiKi.fTKB.resources
